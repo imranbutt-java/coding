@@ -1,4 +1,4 @@
-package com.practice.coding.common;
+package com.practice.coding.algorithms;
 
 //Say you have an array for which the ith element is the price of a given stock on day i.
 
@@ -37,5 +37,10 @@ public class KadaneAlgo {
 		}
 
 		return maxProfit;
+	}
+
+	public static void main(String[] args) {
+		KadaneAlgo c = new KadaneAlgo();
+		System.out.println("Maximum Profit: "+c.maxProfit(new int[]{7, 1, 5, 3, 6, 4}));
 	}
 }
