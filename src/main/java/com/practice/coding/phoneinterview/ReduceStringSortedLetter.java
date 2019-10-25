@@ -1,4 +1,4 @@
-package com.practice.coding.sorting;
+package com.practice.coding.phoneinterview;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
