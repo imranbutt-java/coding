@@ -1,4 +1,4 @@
-package com.practice.coding.common;
+package com.practice.coding.tree;
 
 public class LowestCommonAncestorOfBT {
 	public static void main(String[] args) {
@@ -9,13 +9,13 @@ public class LowestCommonAncestorOfBT {
 		lowestCommonAnsc();
 	}
 	
-	public Node lowestCommonAnsc(Node root, Node a, Node b) {
+	public LCANode lowestCommonAnsc(LCANode root, LCANode a, LCANode b) {
 		if(root == null || a == null || b == null) {
 			return null;
 		}
-		
-		Node l = lowestCommonAnsc(root.left, a, b);
-		Node r = lowestCommonAnsc(root.right, a, b);
+
+		LCANode l = lowestCommonAnsc(root.left, a, b);
+		LCANode r = lowestCommonAnsc(root.right, a, b);
 		
 		if(l == null || r == null)
 			return root;
@@ -24,11 +24,11 @@ public class LowestCommonAncestorOfBT {
 	}
 }
 
-class Node {
-	Node left;
-	Node right;
+class LCANode {
+	LCANode left;
+	LCANode right;
 	int data;
-	Node(int d) {
+	LCANode(int d) {
 		this.data = d;
 	}
 }

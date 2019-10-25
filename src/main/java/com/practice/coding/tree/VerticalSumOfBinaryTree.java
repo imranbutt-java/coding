@@ -1,4 +1,4 @@
-package com.practice.coding.common;
+package com.practice.coding.tree;
 
 import java.util.HashMap;
 
