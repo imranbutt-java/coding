@@ -26,6 +26,7 @@ public class AllPathsFromSourceToTarget {
 		return ans;
 	}
 
+	//Trying all path.
 	private void helper(List<List<Integer>> ans, List<Integer> tmp, int[][] graph, int i) {
 		if(i == graph.length - 1) {
 			ans.add(new ArrayList<>(tmp));

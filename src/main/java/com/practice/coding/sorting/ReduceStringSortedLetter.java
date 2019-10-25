@@ -32,7 +32,8 @@ public class ReduceStringSortedLetter {
         }
         
         
-        //STEP 2: create another map, for each count, create a string builder, based on the previous map (that is in order)
+        //STEP 2: create another map, for each count, create a string builder, based on 
+        //the previous map (that is in order)
         Map<Integer,StringBuilder> map = new HashMap<>();
         int max = 0;
         for(Map.Entry<Character, Integer> e: count.entrySet()){
