@@ -135,8 +135,8 @@ public class MinCostBinaryMaze {
 
         List<List<Integer>> m1 = Arrays.asList(
                 Arrays.asList(0,0,0,0,0),
-                Arrays.asList(0,1,1,1,0),
-                Arrays.asList(0,1,0,5,1),
+                Arrays.asList(0,1,0,1,0),
+                Arrays.asList(0,1,0,5,0),
                 Arrays.asList(0,1,0,1,1),
                 Arrays.asList(0,0,0,0,0));
         System.out.println(shortestPathBinaryMatrix(m1));

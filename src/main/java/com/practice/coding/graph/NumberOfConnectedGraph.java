@@ -26,12 +26,16 @@ public class NumberOfConnectedGraph {
 		
 		for(int[] edge: edges) {
 			if(find(edge[0], parent) != find(edge[1], parent)) {
-				parent[edge[0]] = parent[edge[1]];
+				union(edge[0], edge[1], parent);
 				n--;
 			}
 		}
 		
 		return n;
+	}
+
+	private void union(int x, int y, int[] parent) {
+		parent[x] = parent[y];
 	}
 
 	private int find(int i, int[] parent) {

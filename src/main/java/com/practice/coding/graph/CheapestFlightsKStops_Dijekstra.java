@@ -9,7 +9,8 @@ import java.util.Queue;
  * 787. Cheapest Flights Within K Stops
  * There are n cities connected by m flights. Each fight starts from city u and arrives at v with a price w.
  *
- * Now given all the cities and flights, together with starting city src and the destination dst, your task is to find the cheapest price from src to dst with up to k stops. If there is no such route, output -1.
+ * Now given all the cities and flights, together with starting city src and the destination dst, your task
+ * is to find the cheapest price from src to dst with up to k stops. If there is no such route, output -1.
  *
  * Example 1:
  * Input:
@@ -20,6 +21,8 @@ import java.util.Queue;
  */
 public class CheapestFlightsKStops_Dijekstra {
     public int findCheapestPrice(int n, int[][] flights, int src, int dst, int K) {
+        //This map has mapping like {src, {{dest, price}, {dest2, price}}}
+        //In short from this source src, we have these destinations with the given prices.
         Map<Integer, Map<Integer, Integer>> prices = new HashMap<>();
         for(int f[]: flights) {
             if(!prices.containsKey(f[0])) prices.put(f[0], new HashMap<>());
@@ -28,6 +31,7 @@ public class CheapestFlightsKStops_Dijekstra {
 
         //Priority Queue with price
         //This pq ordered with price and it contains {price, city1, remaining stops}
+        //In short we have price we have to pay to reach city city1 and we have remaining stops.
         Queue<int[]> pq = new PriorityQueue<>((a, b) -> a[0] - b[0]);
         pq.add(new int[] {0, src, K+1});
 
